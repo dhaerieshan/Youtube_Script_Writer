@@ -38,18 +38,14 @@ if submit:
     
     if st.session_state['API_Key']:
         search_result,title,script = generate_script(prompt,video_length,creativity,st.session_state['API_Key'])
-        #Let's generate the script
         st.success('Hope you like this script ')
 
-        #Display Title
         st.subheader("Title:")
         st.write(title)
 
-        #Display Video Script
         st.subheader("Your Video Script:")
         st.write(script)
 
-        #Display Search Engine Result
         st.subheader("Check Out - DuckDuckGo Search:🔍")
         with st.expander('Show me '): 
             st.info(search_result)
